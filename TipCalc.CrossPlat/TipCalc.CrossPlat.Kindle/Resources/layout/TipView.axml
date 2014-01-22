@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/TipCalc.CrossPlat.Kindle"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00007f"
+    android:textColor="#ffffff">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip Calculator"
+        android:textSize="45.0dp"
+        android:textColor="#ffff00"
+        android:layout_marginLeft="48.4dp"
+        android:layout_marginBottom="16.4dp"
+        android:layout_marginRight="48.4dp" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Bill SubTotal"
+        android:textSize="30.0dp"
+        android:textColor="#ffff00"
+        android:drawablePadding="30.0dp" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        local:MvxBind="Text BillSubTotal"
+        android:textSize="30.0dp" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip Percentage"
+        android:textColor="#ffff00"
+        android:textSize="30.0dp" />
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="45"
+        local:MvxBind="Progress TipPercent"
+        android:fitsSystemWindows="true" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text TipPercent"
+        android:textSize="30.0dp" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#ffff00" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip Total Amount"
+        android:textColor="#ffff00"
+        android:textSize="30.0dp" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text TipTotal"
+        android:textSize="30.0dp" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#ffff00" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Amount"
+        android:textSize="30.0dp"
+        android:textColor="#ffff00" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text BillTotal"
+        android:textSize="30.0dp" />
+</LinearLayout>

@@ -1,0 +1,50 @@
+﻿<!--<phone:PhoneApplicationPage-->
+    <views:MvxPhonePage
+    x:Class="TipCalc.CrossPlat.WinPhone.Views.TipView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Views;assembly=Cirrious.MvvmCross.WindowsPhone"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Blue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Utility App" Style="{StaticResource PhoneTextNormalStyle}" Foreground="Yellow"/>
+            <TextBlock Text="Tip Calculator" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="Yellow"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            
+            <StackPanel>
+                <TextBlock x:Name="BillSubTotalLbl" Text="Bill Total" Style="{StaticResource PhoneTextGroupHeaderStyle}" Foreground="Yellow"/>
+                <TextBox x:Name="BillSubTotal" Text="{Binding BillSubTotal, Mode=TwoWay}"/>
+                <TextBlock x:Name="TipPercentageSldr" Text="Tip Percentage" Style="{StaticResource PhoneTextGroupHeaderStyle}" Foreground="Yellow"/>
+                <Slider x:Name="TipPercemtage" Value="{Binding TipPercent, Mode=TwoWay}" Background="DarkBlue" Maximum="100" Foreground="Yellow"/>
+                <Line x:Name="divTipLine" Stroke="Yellow" StrokeThickness="5" X1="15"  X2="435"/>
+                <TextBlock x:Name="TipTotalLbl" Text="Tip Total" Padding="0,10" Style="{StaticResource PhoneTextGroupHeaderStyle}" Foreground="Yellow"/>
+                <TextBlock x:Name="TotalTip" Text="{Binding TipTotal}" Padding="10" Style="{StaticResource PhoneTextGroupHeaderStyle}" VerticalAlignment="Center" Foreground="White"/>
+                <Line x:Name="divTotLine" Stroke="Yellow" StrokeThickness="5" X1="15" X2="435"/>
+                <TextBlock x:Name="TotalBillLbl" Text="Bill Total" Style="{StaticResource PhoneTextGroupHeaderStyle}" Foreground="Yellow"/>
+                <TextBlock x:Name="TotalBill" Text="{Binding BillTotal}" Style="{StaticResource PhoneTextGroupHeaderStyle}" Padding="10" VerticalAlignment="Center" Foreground="White"/>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+
+    </views:MvxPhonePage>
